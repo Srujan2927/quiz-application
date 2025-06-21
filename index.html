@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="container" role="main" aria-label="Quiz application">
+
+        <!-- Quiz Selection Screen -->
+        <section id="quiz-selection" aria-labelledby="select-quiz-title">
+            <h1 id="select-quiz-title">Select a Quiz</h1>
+            <p>Choose from the available quizzes below:</p>
+            <ul class="quiz-list" id="quiz-list">
+                <!-- Quiz list buttons dynamically inserted here -->
+            </ul>
+        </section>
+
+        <!-- Quiz Game Screen -->
+        <section id="quiz-game" aria-labelledby="quiz-title">
+            <h1 id="quiz-title"></h1>
+            <div id="question-number" aria-live="polite"></div>
+            <div id="question" aria-live="polite"></div>
+            <ul class="answers" role="list"></ul>
+            <div id="feedback" aria-live="assertive"></div>
+            <div id="score" aria-live="polite"></div>
+            <button id="next-btn" hidden>Next Question</button>
+            <button id="restart-btn" hidden>Back to Quiz Selection</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
